@@ -9,46 +9,89 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="grid wide container">
-        <div class="row row-header">
-            <div class="col l-4 header">
-                <div class="header-logo">
-                    <img src="./images/header_logo.png" alt="">
-                </div>
-            </div>
-            <div class="col l-4 header-title">
-                <h3>STUDY ENGLISH</h3>
-            </div>
-            <div class="col l-4 header-json">
-                <a href="input_json.html" target="_blank">TỚI TRANG NHẬP JSON</a>
-            </div>
-        </div>
-    </div>
-    <div class="grid wide container">
-        <div class="row row-body">
-            <div class="col l-5 sub-container">
-                <div class="card-sub">
-                    <div class="img-sub">
-                        <img src="./images/test1.jpg" alt="">
-                    </div>
-                    <div class="sub-content">
-                        <span>nội dung sub</span>
+    <section id="main_page" style="display: block">
+        <div class="grid wide container">
+            <div class="row row-header">
+                <div class="col l-4 header">
+                    <div class="header-logo">
+                        <img src="./images/header_logo.png" alt="">
                     </div>
                 </div>
-                <div class="control">
-                    <button class="btn ">lui</button>
-                    <button class="btn ">tiến</button>
-
+                <div class="col l-4 header-title">
+                    <h3>STUDY ENGLISH</h3>
+                </div>
+                <div class="col l-4 header-json">
+                    <a class="toggleBtn" onclick="togglePages()">TỚI TRANG NHẬP JSON</a>
                 </div>
             </div>
-            <div class="col l-o-1 l-6"></div>
         </div>
+        <div class="grid wide container">
+            <div class="row row-body">
+                <div class="col l-5 sub-container">
+                    <div id="card-sub" class="card-sub">
+                        <div class="img-sub">
+                            <img src="./images/sub_img/default.png" alt="">
+                        </div>
+                        <div class="sub-content">
+                            <span>no data</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button onclick="backSubCard()"class="btn">lui</button>
+                        <button  onclick="nextSubCard()" class="btn">tiến</button>
+    
+                    </div>
+                </div>
+                <div class="col l-o-1 l-6"></div>
+            </div>
+        </div>
+    </section>
+    <section id="input_page" style="display: block">
+        <div class="grid wide container">
+            <div class="row row-header">
+                <div class="col l-4 header">
+                    <div class="header-logo">
+                        <img src="./images/header_logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col l-4 header-title">
+                    <h3>NHẬP JSON</h3>
+                </div>
+                <div class="col l-4 header-json">
+                    <a class="toggleBtn" onclick="togglePages()">TỚI TRANG CHỦ</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid input-container">
+            <div class="row">
+                <div class="col l-5 input-group">
+                    <h4>Tạo phụ đề, sub tiếng anh cho video</h4>
+                    <div id="card-sub" class="input-form">
+                        <label for="">vị trí (thời gian) hiện tại: </label>
+                        <input id="time_sub" size="4" type="text"><br>
+                        <label for="">Link hình ảnh phụ đề:</label><br>
+                        <input id="link_sub" size="40" type="text" value="./images/sub_img/sub_test.jpg"><br>
+                        <label for="">subtitle cho hình ảnh phụ đề:</label><br>
+                        <input id="text_sub" size="40" type="text">
+                        <button onclick="saveJson()">lưu json mới</button>
+                    </div>
+                </div>
+                <div class="col l-o-1 l-6"></div>
+                
+            </div>
+            <div class="row row-end">
+                <div class="col l-12 col-end">
+                    <button onclick="jsonHientai()">JSON vừa nhập</button>
+                    <input id="json_text" size="100" type="text">
+                </div>
+            </div>
+    
+        </div>
+    </section>
 
-    </div>
 
 
-
-
+    <script src="./subcard.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

@@ -28,7 +28,12 @@
     align-items: center;
     font-size: 1.3rem;
 }
+.toggleBtn:hover {
+    color: red;
+    cursor: pointer;
+}
 /* css cho body */
+
 .row-body{
     height: 600px;
     border: 2px solid rgb(228, 215, 32);
@@ -38,19 +43,23 @@
     height: 400px;
     margin-top: 1rem;
     margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border: 1px solid rgb(203, 216, 19);
     border-radius: 25px;
 }
 .img-sub {
+    margin-left: 30px;
     height: 85%;
 }
 .img-sub img {
     height: 100%;
+    max-width: 90%;
 }
 .sub-content{
     padding: 5px;
@@ -58,9 +67,33 @@
 .control {
     margin-top: 5px;
     margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     justify-content: space-between;
 }
 .btn {
     padding: 0.6rem 1rem;
+}
+
+/* css cho form nhập json */
+.input-container{
+    border: 2px solid rgb(228, 215, 32);
+    border-radius: 25px;
+    width: 1220px;
+    margin: auto;
+    padding: 1rem;
+}
+.input-group {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.input-form {
+    margin: 1rem;
+}
+.input-form input {
+    margin-bottom: 1rem;
+}
+.col-end{
+    display: flex;
+    justify-content: center;
 }
