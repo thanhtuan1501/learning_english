@@ -71,11 +71,35 @@
     display: flex;
     justify-content: space-between;
 }
+.lock{
+    margin-top: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: red;
+}
+.lock-active{
+    background-color:rgb(59, 212, 79);
+}
+.video-container{
+    padding-top: 2rem;
+}
+.video-control{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
 .btn {
     padding: 0.6rem 1rem;
 }
+.transcript_video{
+    margin-left: 5rem;
+    white-space:pre;
+}
 
 /* css cho form nhập json */
+.row-end {
+    margin-top: 3rem;
+}
 .input-container{
     border: 2px solid rgb(228, 215, 32);
     border-radius: 25px;

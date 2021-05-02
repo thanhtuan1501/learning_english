@@ -39,14 +39,23 @@
                     <div class="control">
                         <button onclick="backSubCard()"class="btn">lui</button>
                         <button  onclick="nextSubCard()" class="btn">tiến</button>
-    
+                    </div>
+                    <button class="lock" onclick="lock()">đã khóa</button>
+                </div>
+                <div class="col l-7 video-container">
+                    <div id="main_video"></div>
+                    <div class="transcript_video">
+                        <h3>alo</h3>
+                    </div>
+                    <div class="video-control">
+                        <button>video trước</button>
+                        <button>video sau</button>
                     </div>
                 </div>
-                <div class="col l-o-1 l-6"></div>
             </div>
         </div>
     </section>
-    <section id="input_page" style="display: block">
+    <section id="input_page" style="display: none">
         <div class="grid wide container">
             <div class="row row-header">
                 <div class="col l-4 header">
@@ -67,8 +76,8 @@
                 <div class="col l-5 input-group">
                     <h4>Tạo phụ đề, sub tiếng anh cho video</h4>
                     <div id="card-sub" class="input-form">
-                        <label for="">vị trí (thời gian) hiện tại: </label>
-                        <input id="time_sub" size="4" type="text"><br>
+                        <button onclick="getCurrentTime()">lấy vị trí hiện tại</button>
+                        <input id="time_sub" size="10" type="text"><label for="">giây</label><br>
                         <label for="">Link hình ảnh phụ đề:</label><br>
                         <input id="link_sub" size="40" type="text" value="./images/sub_img/sub_test.jpg"><br>
                         <label for="">subtitle cho hình ảnh phụ đề:</label><br>
@@ -76,7 +85,16 @@
                         <button onclick="saveJson()">lưu json mới</button>
                     </div>
                 </div>
-                <div class="col l-o-1 l-6"></div>
+                <div class="col l-7">
+                    <div id="input_video"></div>
+                    <div class="transcript_video">
+                        <h3>alo</h3>
+                    </div>
+                    <div class="video-control">
+                        <button>video trước</button>
+                        <button>video sau</button>
+                    </div>
+                </div>
                 
             </div>
             <div class="row row-end">
@@ -88,8 +106,6 @@
     
         </div>
     </section>
-
-
 
     <script src="./subcard.js"></script>
     <script src="./main.js"></script>
