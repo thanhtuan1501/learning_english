@@ -96,13 +96,6 @@ function onYouTubeIframeAPIReady() {
     player1 = new YT.Player('main_video', {
         height: '390',
         width: '640',
-        videoId: 'v0hN3UP0PQo',
-        loadPlaylist:{
-            listType:'playlist',
-            list: playList.map(e => e.videoUrl),
-            index:parseInt(0),
-            suggestedQuality:'small'
-         },
         playerVars: {
           'playsinline': 1
         },
@@ -114,13 +107,6 @@ function onYouTubeIframeAPIReady() {
       player2 = new YT.Player('input_video', {
         height: '390',
         width: '640',
-        videoId: 'v0hN3UP0PQo',
-        loadPlaylist:{
-            listType:'playlist',
-            list: playList.map(e => e.videoUrl),
-            index:parseInt(0),
-            suggestedQuality:'small'
-         },
         playerVars: {
           'playsinline': 1
         },
@@ -133,7 +119,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     event.target.loadPlaylist(playList.map(e => e.videoUrl));
-    setTimeout(event.target.stopVideo(),500);
+    setTimeout(event.target.pauseVideo(),300);
 }
 
 function onPlayerStateChange(event) {
