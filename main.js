@@ -119,7 +119,9 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     event.target.loadPlaylist(playList.map(e => e.videoUrl));
-    setTimeout(event.target.pauseVideo(),300);
+    setTimeout(()=>{
+        event.target.pauseVideo();
+    },300);
 }
 
 function onPlayerStateChange(event) {
