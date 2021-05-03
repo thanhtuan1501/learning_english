@@ -96,7 +96,12 @@ function onYouTubeIframeAPIReady() {
     player1 = new YT.Player('main_video', {
         height: '390',
         width: '640',
-        videoId: 'v0hN3UP0PQo',
+        loadPlaylist:{
+            listType:'playlist',
+            list: playList.map(e => e.videoUrl),
+            index:parseInt(0),
+            suggestedQuality:'small'
+         },
         playerVars: {
           'playsinline': 1
         },
@@ -108,7 +113,12 @@ function onYouTubeIframeAPIReady() {
       player2 = new YT.Player('input_video', {
         height: '390',
         width: '640',
-        videoId: 'v0hN3UP0PQo',
+        loadPlaylist:{
+            listType:'playlist',
+            list: playList.map(e => e.videoUrl),
+            index:parseInt(0),
+            suggestedQuality:'small'
+         },
         playerVars: {
           'playsinline': 1
         },
@@ -118,14 +128,14 @@ function onYouTubeIframeAPIReady() {
         }
       });
 }
+
 function onPlayerReady(event) {
-
-
+    event.target.loadPlaylist(playList.map(e => e.videoUrl));
+    event.target.pauseVideo();
 }
 
 function onPlayerStateChange(event) {
     handleTranscript();
-    
 }
 
 function getCurrentTime () {
@@ -190,4 +200,16 @@ const checkRepeat = (arr, checkValue) => {
         }        
     }
     return true;
+}
+const preVideo = () => {
+    player1.previousVideo()
+}
+const nextVideo = () => {
+    player1.nextVideo()
+}
+const preVideo2 = () => {
+    player2.previousVideo()
+}
+const nextVideo2 = () => {
+    player2.nextVideo()
 }

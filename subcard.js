@@ -26,3 +26,10 @@ var convertSecondTime = (time) => {
     return timeS
 }
 var secondTime = [1, 7, 12, 16, 19, 21, 24, 30, 34, 38, 40, 44, 46, 49, 51, 53, 58, 65, 69, 71, 76, 80, 84, 86, 90, 93, 97, 99, 103, 107, 111, 116, 121, 125, 130, 132, 134, 141, 144, 150, 151, 157, 164, 170, 173, 178, 182, 185, 188, 191, 196, 204, 208, 209, 214, 223, 227, 232, 236]
+var playList = [
+    { videoId : 1, videoUrl : 'v0hN3UP0PQo'},
+    { videoId : 2, videoUrl : 'hPTwprjSzZs'},
+    { videoId : 3, videoUrl : 'iZSaRktkvxA'},
+    { videoId : 4, videoUrl : 'Oxw6FoUNeT4'}
+]
+console.log(playList.map(e => e.videoUrl))
