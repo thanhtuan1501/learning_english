@@ -1,4 +1,4 @@
-
+var testgithub;
 const togglePages = () => {
     let mainPage = document.querySelector('#main_page');
     if(mainPage.style.display == 'block'){
